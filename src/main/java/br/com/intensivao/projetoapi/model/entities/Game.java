@@ -1,4 +1,4 @@
-package br.com.intensivao.projetoapi.entities;
+package br.com.intensivao.projetoapi.model.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -23,7 +23,7 @@ public class Game {
     private String platforms;
     private String imgUrl;
 
-    @Column(columnDefinition = "TEXT")      // definindo esse campo no DB como 'TEXT'
+    @Column(columnDefinition = "TEXT") // definindo esse campo no DB como tipo 'TEXT'
     private String shortDescription;
 
     @Column(columnDefinition = "TEXT")
