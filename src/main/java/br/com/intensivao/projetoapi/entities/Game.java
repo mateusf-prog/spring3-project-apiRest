@@ -15,14 +15,18 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
+    private Double score;
 
     @Column(name = "game_year")
     private Integer year;
     private String genre;
-    private String platorms;
-    private Double score;
+    private String platforms;
     private String imgUrl;
+
+    @Column(columnDefinition = "TEXT")      // definindo esse campo no DB como 'TEXT'
     private String shortDescription;
+
+    @Column(columnDefinition = "TEXT")
     private String longDescription;
 
     public Game() {
@@ -60,12 +64,12 @@ public class Game {
         this.genre = genre;
     }
 
-    public String getPlatorms() {
-        return platorms;
+    public String getplatforms() {
+        return platforms;
     }
 
-    public void setPlatorms(String platorms) {
-        this.platorms = platorms;
+    public void setplatforms(String platforms) {
+        this.platforms = platforms;
     }
 
     public Double getScore() {
